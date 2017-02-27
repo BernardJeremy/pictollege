@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="/public/build/jquery-1.4.2.min.js"></script>
-        <script type="text/javascript" src="/public/build/cacophony.min.js"></script>
+        <script type="text/javascript" src="public/build/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="public/build/cacophony.min.js"></script>
 
-        <script type="text/javascript" src="/public/js/branching-settings.js"></script>
-        <script type="text/javascript" src="/public/js/branching-story.js"></script>
-        <script type="text/javascript" src="/public/js/branching-init.js"></script>
+        <script type="text/javascript">
+            // Set the key of the song.
+            cacophony.setKey ('a');
 
-        <link rel="stylesheet" type="text/css" href="/public/css/cacophony.min.css" />
-        <link rel="stylesheet" type="text/css" href="/public/css/demo-style.css" />
+            // Set the beats-per-minute.
+            cacophony.setBPM (184);
+
+            // Set the width and height of the video.
+            cacophony.setSize (854, 480);
+
+            // Specify the video files. Multiple files are required to be compatible
+            // with the different browsers at this time.
+            cacophony.setVideo (
+                'public/video/demo.mp4',
+                'public/video/demo.webm',
+                'public/video/demo.ogv'
+            );
+
+            // Preload any images you'll be using in your story.
+            cacophony.preloadImages (
+            );
+
+            // Preload any data feeds (JSON, RSS, ATOM) you'll be using in your story.
+            cacophony.preloadData (
+            );
+        </script>
+       
+        <script type="text/javascript" src="public/js/branching-settings.js"></script>
+        <script type="text/javascript" src="public/js/branching-story.js"></script>
+        <script type="text/javascript" src="public/js/branching-init.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="public/css/cacophony.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/css/demo-style.css" />
 
         <meta charset="utf-8" />
         <title>Test Interactive</title>
@@ -27,7 +54,7 @@
 
             <div id="fade">
                 <div id="browser-check"></div>
-                <div id="fade-loading"><img src="/public/pix/loading.gif" border="0" /> Loading... <span id="percent">0%</span></div>
+                <div id="fade-loading"><img src="public/pix/loading.gif" border="0" /> Loading... <span id="percent">0%</span></div>
                 <div id="fade-play">
                     <a href="#" onclick="return fade_in ()" id="fade-play-button">PLAY</a>
                 </div>

@@ -1,31 +1,6 @@
 // This is the settings file. Edit the following settings to suit your
 // video.
 
-// Set the key of the song.
-cacophony.setKey ('a');
-
-// Set the beats-per-minute.
-cacophony.setBPM (184);
-
-// Set the width and height of the video.
-cacophony.setSize (854, 480);
-
-// Specify the video files. Multiple files are required to be compatible
-// with the different browsers at this time.
-cacophony.setVideo (
-	'/public/video/demo.mp4',
-	'/public/video/demo.webm',
-	'/public/video/demo.ogv'
-);
-
-// Preload any images you'll be using in your story.
-cacophony.preloadImages (
-);
-
-// Preload any data feeds (JSON, RSS, ATOM) you'll be using in your story.
-cacophony.preloadData (
-);
-
 // Set the `eq_data` for each beat of the song. This is an array of objects
 // of the form:
 //
