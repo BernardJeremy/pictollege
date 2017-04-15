@@ -15,6 +15,7 @@ cacophony.callback.loading = function (percent) {
 cacophony.callback.ready = function () {
     $('#fade-loading').hide();
     $('#fade-play').show();
+    $("#canvas-uuid-1").css('visibility', 'hidden');
 }
 
 cacophony.callback.browser_check = function (msg, compat) {

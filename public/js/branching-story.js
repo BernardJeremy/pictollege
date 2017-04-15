@@ -107,38 +107,54 @@
 
 // #### Your story goes here.
 
-_s[0] = [
-	{a:'bg_colour', d:{colour: 'rgba(100, 100, 100, 1)'}},
+_s[15] = [
 	{a:'input_branching', d:{
-		msg: 'Where to?',
+		msg: 'Que voulez-vous voir ?',
 		options: [
-			{choice: 'Option one', jump_to: 30},
-			{choice: 'Option two', jump_to: 60},
-			{choice: 'Option three', jump_to: 90},
-			{choice: 'Option four', jump_to: 120}
+			{choice: 'Informations Elèves', jump_to: 32},
+			{choice: 'Informations Parents', jump_to: 47},
+			{choice: 'Informations Collèges', jump_to: 62},
+			{choice: 'Revoir l\'introduction', jump_to: 0},
 		]
 	}}
 ];
 
-_s[3] = [
-	{a:'skyline_on'},
-	{a:'volume_fade', d:{to:1, duration:2}}
+_s[29] = [
+	{a:'jump_to', d:18}
 ];
 
-_s[25] = [
-	{a:'volume_fade', d:{to:0, duration:2}}
+_s[44] = [
+	{a:'jump_to', d:76}
 ];
 
-_s[27] = [
-	{a:'jump_to', d:3}
+_s[59] = [
+	{a:'jump_to', d:76}
 ];
 
+_s[74] = [
+	{a:'jump_to', d:76}
+];
+
+_s[76] = [
+	{a:'input_branching', d:{
+		msg: 'Que voulez-vous voir ?',
+		options: [
+			{choice: 'Informations Elèves', jump_to: 32},
+			{choice: 'Informations Parents', jump_to: 47},
+			{choice: 'Informations Collèges', jump_to: 62},
+			{choice: 'Revoir l\'introduction', jump_to: 0},
+		]
+	}}
+];
+
+_s[85] = [
+	{a:'jump_to', d:79}
+];
+
+
+/*
 _s[31] = [
 	{a:'lyrics', d:{txt:'Thanks for choosing option one!', x: 150, y: 200, colour:'rgba(225, 225, 225, 1)'}}
-];
-
-_s[57] = [
-	{a:'volume_fade', d:{to:0, duration:2}}
 ];
 
 _s[59] = [
@@ -185,3 +201,4 @@ _s[166] = [
 	{a:'skyline_off'},
 	{a:'bg_fade_out'}
 ];
+*/
