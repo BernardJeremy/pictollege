@@ -1,83 +1,66 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <script type="text/javascript" src="public/build/jquery-1.4.2.min.js"></script>
-        <script type="text/javascript" src="public/build/cacophony.min.js"></script>
+<head>
+  <link href="http://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet">
 
-        <script type="text/javascript">
-            // Set the key of the song.
-            cacophony.setKey ('a');
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</head>
 
-            // Set the beats-per-minute.
-            cacophony.setBPM (180);
+<body>
+  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    <source src="video.webm" type='video/webm'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
 
-            // Set the width and height of the video.
-            cacophony.setSize (854, 480);
+  <script src="http://vjs.zencdn.net/5.19.2/video.js"></script>
 
-            // Specify the video files. Multiple files are required to be compatible
-            // with the different browsers at this time.
-            cacophony.setVideo (
-                'https://backup.bernard.sh/work_in_progress/video_prod.mov'
-            );
+  <script>
+ 
+    var baseData = {
+        baseHeight: 264,
+        baseWidth: 640,
+    }
 
-            // Preload any images you'll be using in your story.
-            cacophony.preloadImages (
-            );
+    var zoneToBeClicked = {
+        leftX: 0,
+        topY: 0,
+        rightX: 319,
+        bottomY: 131,
+    }
 
-            // Preload any data feeds (JSON, RSS, ATOM) you'll be using in your story.
-            cacophony.preloadData (
-            );
-        </script>
-       
-        <script type="text/javascript" src="public/js/branching-settings.js"></script>
-        <script type="text/javascript" src="public/js/branching-story.js"></script>
-        <script type="text/javascript" src="public/js/branching-init.js"></script>
+    function isInZone(X, Y, zone) {
+        return (X >= zone.leftX && X <= zone.rightX && Y >= zone.topY && Y <= zone.bottomY);
+    }
 
-        <link rel="stylesheet" type="text/css" href="public/css/cacophony.min.css" />
-        <link rel="stylesheet" type="text/css" href="public/css/demo-style.css" />
+    $(document).ready(function(){
+        $("#my-video").click(function(e){
+            console.log("Height : " + $("#my-video").height());
+            console.log("Width : " + $("#my-video").width());
+            console.log("Mouse-X: " + (e.clientX + window.pageXOffset));
+            console.log("Mouse-Y: " + (e.clientY + window.pageYOffset));
+            e.preventDefault();
 
-        <meta charset="utf-8" />
-        <title>Test Interactive</title>
-    </head>
+            console.log('Dans une zone clickable ? : ' + isInZone(e.clientX, e.clientY, zoneToBeClicked));
 
-    <body>
-        <div id="erase-me" style="z-index: 101; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #1B0101"></div>
-        <div id="show-me" style="display: none">
-            <div id="cacophony"></div>
+        });
+    });
 
-            <div id="copyright">
-                &copy; <span id="year">2010</span> <a href="http://www.cacophonyjs.com/">Cacophony</a>. All rights reserved. | <a href="#"
-                    onclick="return about ()">About</a>
-            </div>
+    videojs("#my-video").ready(function(){
+       this.on("timeupdate", function(){
+               if (this.currentTime() > 5) {
+                   console.log('Reset video');
+                   this.currentTime(0);
+               }
+       });
+    });
 
-            <div id="fade">
-                <div id="browser-check"></div>
-                <div id="fade-loading"><img src="public/pix/loading.gif" border="0" /> Loading... <span id="percent">0%</span></div>
-                <div id="fade-play">
-                    <a href="#" onclick="return fade_in ()" id="fade-play-button">PLAY</a>
-                </div>
-            </div>
+  </script>
 
-            <div id="about-outer">
-                <div id="about">
-                    <p>This music video started as an experiment in creating visual art through code. The effects you see are being generated
-                        on-the-fly using HTML5 and Javascript. For more information, visit:</p>
-                    <ul>
-                        <li><a href="http://www.cacophonyjs.com/">www.cacophonyjs.com</a></li>
-                    </ul>
-                    <p>Some of the visual effects rely on other open source projects, including:</p>
-                    <ul>
-                        <li><a href="http://www.jquery.com/">jQuery</a></li>
-                        <li><a href="http://code.google.com/p/cakejs/">Cake.js</a></li>
-                        <li><a href="http://code.google.com/p/contextfree/">ContextFree.js</a></li>
-                        <li><a href="http://github.com/mrdoob/harmony">Harmony</a></li>
-                        <li><a href="http://github.com/mrdoob/three.js">Three.js</a></li>
-                    </ul>
-                    <hr />
-                    <div id="about-close" onclick="return about_close ()">Close</div>
-                </div>
-            </div>
-
-        </div>
-    </body>
-</html>
+</body>
