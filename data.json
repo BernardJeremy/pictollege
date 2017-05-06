@@ -1,0 +1,22 @@
+{
+    "baseData": {
+        "baseWidth": 640,
+        "baseHeight": 264
+    },
+    "events": [
+        {
+            "name": "resetAt5sec",
+            "type": "move",
+            "from": 2,
+            "to": 8
+        },
+        {
+            "name": "clickMenuLeft",
+            "type": "click",
+            "leftX": 0,
+            "topY": 0,
+            "rightX": 320,
+            "bottomY": 264
+        }
+    ]
+}

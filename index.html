@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+  <video id="my-video" class="video-js" autoplay controls preload="auto" width="640" height="264"
   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
     <source src="video.webm" type='video/webm'>
     <p class="vjs-no-js">
@@ -21,46 +21,6 @@
 
   <script src="http://vjs.zencdn.net/5.19.2/video.js"></script>
 
-  <script>
- 
-    var baseData = {
-        baseHeight: 264,
-        baseWidth: 640,
-    }
-
-    var zoneToBeClicked = {
-        leftX: 0,
-        topY: 0,
-        rightX: 319,
-        bottomY: 131,
-    }
-
-    function isInZone(X, Y, zone) {
-        return (X >= zone.leftX && X <= zone.rightX && Y >= zone.topY && Y <= zone.bottomY);
-    }
-
-    $(document).ready(function(){
-        $("#my-video").click(function(e){
-            console.log("Height : " + $("#my-video").height());
-            console.log("Width : " + $("#my-video").width());
-            console.log("Mouse-X: " + (e.clientX + window.pageXOffset));
-            console.log("Mouse-Y: " + (e.clientY + window.pageYOffset));
-            e.preventDefault();
-
-            console.log('Dans une zone clickable ? : ' + isInZone(e.clientX, e.clientY, zoneToBeClicked));
-
-        });
-    });
-
-    videojs("#my-video").ready(function(){
-       this.on("timeupdate", function(){
-               if (this.currentTime() > 5) {
-                   console.log('Reset video');
-                   this.currentTime(0);
-               }
-       });
-    });
-
-  </script>
+  <script src="prismatic.js"></script>
 
 </body>
