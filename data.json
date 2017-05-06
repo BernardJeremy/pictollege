@@ -5,18 +5,55 @@
     },
     "events": [
         {
-            "name": "resetAt5sec",
+            "name": "jumpToMenu",
             "type": "move",
-            "from": 2,
-            "to": 8
+            "from": 5,
+            "to": 15
         },
         {
-            "name": "clickMenuLeft",
+            "name": "clickMenuEleves",
             "type": "click",
-            "leftX": 0,
+            "jumpTo": "90",
+            "starting": 16,
+            "ending": 18,
+            "leftX": 85,
             "topY": 0,
-            "rightX": 320,
+            "rightX": 230,
             "bottomY": 264
+        },
+        {
+            "name": "clickMenuParents",
+            "type": "click",
+            "jumpTo": "19",
+            "starting": 16,
+            "ending": 18,
+            "leftX": 238,
+            "topY": 0,
+            "rightX": 398,
+            "bottomY": 264
+        },
+        {
+            "name": "clickMenuColleges",
+            "type": "click",
+            "jumpTo": "70",
+            "starting": 16,
+            "ending": 18,
+            "leftX": 406,
+            "topY": 0,
+            "rightX": 561,
+            "bottomY": 264
+        },
+        {
+            "name": "JumpToMenuBegin",
+            "type": "move",
+            "from": 18,
+            "to": 16
+        },
+        {
+            "name": "JumpToVideoStart",
+            "type": "move",
+            "from": 100,
+            "to": 0
         }
     ]
 }

@@ -10,6 +10,10 @@ function isInZone(X, Y, zone) {
   return (X >= zone.leftX && X <= zone.rightX && Y >= zone.topY && Y <= zone.bottomY);
 }
 
+function isInTiming(from, to, current) {
+  return (current >= from - MARGIN_S_CHECK_MOVE_ACTION && current <= to + MARGIN_S_CHECK_MOVE_ACTION);
+}
+
 function handleMoveAction(player) {
   var currentTimeValue = player.currentTime();
   $.each(registeredAction['move'], function (key, val) {
@@ -54,11 +58,16 @@ $(document).ready(function () {
             "rightX": val.rightX / data.baseData.baseWidth * videoCanva.width(),
             "bottomY": parseFloat(val.bottomY) / parseFloat(data.baseData.baseHeight) * parseFloat(videoCanva.height()),
           };
-          console.log('Dans une zone clickable ? : ' + isInZone(e.clientX, e.clientY, actualZone));
+
+          if (isInZone(e.clientX, e.clientY, actualZone) && isInTiming(val.starting, val.ending, player.currentTime())) {
+            if (val.jumpTo) {
+              console.log('Jump to  : ' + val.jumpTo);
+              player.currentTime(val.jumpTo);
+            }
+          }
         });
 
       });
-
     });
   });
 });
