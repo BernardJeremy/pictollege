@@ -1,57 +1,81 @@
 var INTERVAL_MS_CHECK_CURRRENT_TIME = 10;
 var MARGIN_S_CHECK_MOVE_ACTION = (INTERVAL_MS_CHECK_CURRRENT_TIME / 1000) * 2;
 
-var registeredAction = {
-  'move': [],
-  'click': [],
+var Prismatic = function (options) {
+
+  this.registeredAction = {
+    'move': [],
+    'click': [],
+  };
+
+  if (!options) {
+    options = {};
+  }
+  this.videoId = options.videoID || 'my-video';
+  this.videoClass = options.videoClass || 'video-js';
+  this.jsonFileUrl = options.jsonFileUrl || 'data.json';
+  this.debug = options.debug || false;
 }
 
-function isInZone(X, Y, zone) {
+Prismatic.prototype.isInZone = function (X, Y, zone) {
   return (X >= zone.leftX && X <= zone.rightX && Y >= zone.topY && Y <= zone.bottomY);
 }
 
-function isInTiming(from, to, current) {
+Prismatic.prototype.isInTiming = function (from, to, current) {
   return (current >= from - MARGIN_S_CHECK_MOVE_ACTION && current <= to + MARGIN_S_CHECK_MOVE_ACTION);
 }
 
-function handleMoveAction(player) {
+Prismatic.prototype.handleMoveAction = function (player) {
   var currentTimeValue = player.currentTime();
-  $.each(registeredAction['move'], function (key, val) {
+  $.each(this.registeredAction['move'], function (key, val) {
     if (currentTimeValue >= val.from - MARGIN_S_CHECK_MOVE_ACTION && currentTimeValue <= val.from + MARGIN_S_CHECK_MOVE_ACTION) {
       player.currentTime(val.to);
     }
   });
 }
 
-$(document).ready(function () {
-  videojs('#my-video').ready(function () {
+Prismatic.prototype.LOG = function (...data) {
+  if (this.debug) {
+    console.log(...data)
+  }
+}
+
+Prismatic.prototype.ERROR = function (...data) {
+  if (this.debug) {
+    console.error(...data)
+  }
+}
+
+Prismatic.prototype.start = function () {
+  var prismatic = this;
+  videojs('#' + this.videoId).ready(function () {
     var player = this;
     window._player = player; // Debug purpose
-    $.getJSON('data.json', function (data) {
+    $.getJSON(prismatic.jsonFileUrl, function (data) {
 
       $.each(data.events, function (key, val) {
-        if (registeredAction[val.type]) {
-          registeredAction[val.type].push(val);
+        if (prismatic.registeredAction[val.type]) {
+          prismatic.registeredAction[val.type].push(val);
         } else {
-          console.error('Action type [' + val.type + '] doesn\'t exist !');
+          prismatic.ERROR('Action type [' + val.type + '] doesn\'t exist !');
         }
       });
 
-      console.log(registeredAction);
+      prismatic.LOG(prismatic.registeredAction);
 
       ///////////////////////////////////
       // Handle move action
       ///////////////////////////////////
       setInterval(function () {
-        handleMoveAction(player);
+        prismatic.handleMoveAction(player);
       }, INTERVAL_MS_CHECK_CURRRENT_TIME);
 
       ///////////////////////////////////
       // Handle click action
       ///////////////////////////////////
-      var videoCanva = $('.video-js');
+      var videoCanva = $('.' + prismatic.videoClass);
       videoCanva.click(function (e) {
-        $.each(registeredAction['click'], function (key, val) {
+        $.each(prismatic.registeredAction['click'], function (key, val) {
           var actualZone = {
             "leftX": parseFloat(val.leftX) / parseFloat(data.baseData.baseWidth) * parseFloat(videoCanva.width()),
             "topY": val.topY / data.baseData.baseHeight * videoCanva.height(),
@@ -59,9 +83,9 @@ $(document).ready(function () {
             "bottomY": parseFloat(val.bottomY) / parseFloat(data.baseData.baseHeight) * parseFloat(videoCanva.height()),
           };
 
-          if (isInZone(e.clientX, e.clientY, actualZone) && isInTiming(val.starting, val.ending, player.currentTime())) {
+          if (prismatic.isInZone(e.clientX, e.clientY, actualZone) && prismatic.isInTiming(val.starting, val.ending, player.currentTime())) {
             if (val.jumpTo) {
-              console.log('Jump to  : ' + val.jumpTo);
+              prismatic.LOG('Jump to  : ' + val.jumpTo);
               player.currentTime(val.jumpTo);
             }
           }
@@ -70,4 +94,4 @@ $(document).ready(function () {
       });
     });
   });
-});
+}
