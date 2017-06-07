@@ -1,59 +1,163 @@
 {
     "baseData": {
-        "baseWidth": 640,
-        "baseHeight": 264
+        "baseWidth": 2829.391845703125,
+        "baseHeight": 1416.9951171875
     },
     "events": [
         {
-            "name": "jumpToMenu",
+            "name": "JumpToMenu",
             "type": "move",
-            "from": 5,
-            "to": 15
+            "from": 0.8,
+            "to": 178
         },
         {
-            "name": "clickMenuEleves",
-            "type": "click",
-            "jumpTo": "90",
-            "starting": 16,
-            "ending": 18,
-            "leftX": 85,
-            "topY": 0,
-            "rightX": 230,
-            "bottomY": 264
+            "name": "accueilMenu",
+            "type": "menu",
+            "timer": {
+                "starting": 34,
+                "ending": 36
+            },
+            "items": [
+                {
+                    "name": "clickMenuEleves",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 90
+                    },
+                    "coord": {
+                        "leftX": 1036,
+                        "topY": 42,
+                        "rightX": 1818,
+                        "bottomY": 1382
+                    }
+                },
+                {
+                    "name": "clickMenuParents",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 39.5
+                    },
+                    "coord": {
+                        "leftX": 208,
+                        "topY": 48,
+                        "rightX": 992,
+                        "bottomY": 1391
+                    }
+                }
+            ]
         },
         {
-            "name": "clickMenuParents",
-            "type": "click",
-            "jumpTo": "19",
-            "starting": 16,
-            "ending": 18,
-            "leftX": 238,
-            "topY": 0,
-            "rightX": 398,
-            "bottomY": 264
-        },
-        {
-            "name": "clickMenuColleges",
-            "type": "click",
-            "jumpTo": "70",
-            "starting": 16,
-            "ending": 18,
-            "leftX": 406,
-            "topY": 0,
-            "rightX": 561,
-            "bottomY": 264
-        },
-        {
-            "name": "JumpToMenuBegin",
+            "name": "JumpToAccueilMenuBegin",
             "type": "move",
-            "from": 18,
-            "to": 16
+            "from": 36,
+            "to": 34.1
         },
         {
-            "name": "JumpToVideoStart",
+            "name": "problemesParentsMenu",
+            "type": "menu",
+            "timer": {
+                "starting": 179,
+                "ending": 184
+            },
+            "items": [
+                {
+                    "name": "clickRetardAbsence",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 186
+                    },
+                    "coord": {
+                        "leftX": 635,
+                        "topY": 139,
+                        "rightX": 1271,
+                        "bottomY": 468
+                    }
+                },
+                {
+                    "name": "clickMaladie",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 198.5
+                    },
+                    "coord": {
+                        "leftX": 1346,
+                        "topY": 138,
+                        "rightX": 2282,
+                        "bottomY": 465
+                    }
+                },
+                {
+                    "name": "clickSoutien",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 212.2
+                    },
+                    "coord": {
+                        "leftX": 319,
+                        "topY": 533,
+                        "rightX": 1268,
+                        "bottomY": 857
+                    }
+                },
+                {
+                    "name": "clickAbsenceDifficulte",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 229
+                    },
+                    "coord": {
+                        "leftX": 1348,
+                        "topY": 533,
+                        "rightX": 2525,
+                        "bottomY": 851
+                    }
+                },
+                {
+                    "name": "clickBilan",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 244
+                    },
+                    "coord": {
+                        "leftX": 313,
+                        "topY": 929,
+                        "rightX": 735,
+                        "bottomY": 1253
+                    }
+                },
+                {
+                    "name": "clickInfoOrientation",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 259.5
+                    },
+                    "coord": {
+                        "leftX": 854,
+                        "topY": 920,
+                        "rightX": 1267,
+                        "bottomY": 1246
+                    }
+                },
+                {
+                    "name": "clickDifficulteImportanteParticuliere",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 276.5
+                    },
+                    "coord": {
+                        "leftX": 1346,
+                        "topY": 930,
+                        "rightX": 2018,
+                        "bottomY": 1244
+                    }
+                }
+            ]
+        },
+        {
+            "name": "JumpToProblemesParentsMenuBegin",
             "type": "move",
-            "from": 100,
-            "to": 0
+            "from": 183,
+            "to": 178.7
         }
     ]
 }
