@@ -1,0 +1,32 @@
+<head>
+  <script type="text/javascript" src="/jquery.min.js"></script>
+</head>
+
+<body>
+  <video id="my-video" class="editor" autoplay controls preload="auto">
+    <source src="/video-pictollege-V1.mov">
+    Video non reconnu
+  </video>
+
+  <script src="prismatic.js"></script>
+  <!--<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var prismatic = new Prismatic({debug: true});
+      prismatic.start(function(err) {
+        if (err !== null) {
+          //error occured
+          console.log(err);
+        } 
+      });
+    });
+  </script>-->
+  <script src="prismatic-editor.js"></script>
+
+  <script>
+    $(function() {
+        var winHeight = $(window).height();
+        $('#my-video').css({  'height': winHeight, 'width': '100%'});
+    });
+  </script>
+
+</body>

@@ -1,36 +1,23 @@
 {
     "baseData": {
-        "baseWidth": 2829.391845703125,
-        "baseHeight": 1416.9951171875
+        "baseWidth": 2089.58349609375,
+        "baseHeight": 1048.9931640625
     },
     "events": [
         {
             "name": "JumpToMenu",
             "type": "move",
             "from": 0.8,
-            "to": 178
+            "to": 35
         },
         {
             "name": "accueilMenu",
             "type": "menu",
             "timer": {
-                "starting": 34,
-                "ending": 36
+                "starting": 34.2,
+                "ending": 36.2
             },
             "items": [
-                {
-                    "name": "clickMenuEleves",
-                    "type": "click",
-                    "action": {
-                        "jumpTo": 90
-                    },
-                    "coord": {
-                        "leftX": 1036,
-                        "topY": 42,
-                        "rightX": 1818,
-                        "bottomY": 1382
-                    }
-                },
                 {
                     "name": "clickMenuParents",
                     "type": "click",
@@ -38,10 +25,23 @@
                         "jumpTo": 39.5
                     },
                     "coord": {
-                        "leftX": 208,
-                        "topY": 48,
-                        "rightX": 992,
-                        "bottomY": 1391
+                        "leftX": 157,
+                        "topY": 37,
+                        "rightX": 737,
+                        "bottomY": 1016
+                    }
+                },
+                {
+                    "name": "clickMenuEleves",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 290.5
+                    },
+                    "coord": {
+                        "leftX": 767,
+                        "topY": 35,
+                        "rightX": 1346,
+                        "bottomY": 1013
                     }
                 }
             ]
@@ -67,10 +67,10 @@
                         "jumpTo": 186
                     },
                     "coord": {
-                        "leftX": 635,
-                        "topY": 139,
-                        "rightX": 1271,
-                        "bottomY": 468
+                        "leftX": 470,
+                        "topY": 118,
+                        "rightX": 942,
+                        "bottomY": 357
                     }
                 },
                 {
@@ -80,10 +80,10 @@
                         "jumpTo": 198.5
                     },
                     "coord": {
-                        "leftX": 1346,
-                        "topY": 138,
-                        "rightX": 2282,
-                        "bottomY": 465
+                        "leftX": 996,
+                        "topY": 115,
+                        "rightX": 1690,
+                        "bottomY": 358
                     }
                 },
                 {
@@ -93,10 +93,10 @@
                         "jumpTo": 212.2
                     },
                     "coord": {
-                        "leftX": 319,
-                        "topY": 533,
-                        "rightX": 1268,
-                        "bottomY": 857
+                        "leftX": 234,
+                        "topY": 408,
+                        "rightX": 941,
+                        "bottomY": 648
                     }
                 },
                 {
@@ -106,10 +106,10 @@
                         "jumpTo": 229
                     },
                     "coord": {
-                        "leftX": 1348,
-                        "topY": 533,
-                        "rightX": 2525,
-                        "bottomY": 851
+                        "leftX": 994,
+                        "topY": 407,
+                        "rightX": 1875,
+                        "bottomY": 647
                     }
                 },
                 {
@@ -119,10 +119,10 @@
                         "jumpTo": 244
                     },
                     "coord": {
-                        "leftX": 313,
-                        "topY": 929,
-                        "rightX": 735,
-                        "bottomY": 1253
+                        "leftX": 228,
+                        "topY": 700,
+                        "rightX": 546,
+                        "bottomY": 943
                     }
                 },
                 {
@@ -132,10 +132,10 @@
                         "jumpTo": 259.5
                     },
                     "coord": {
-                        "leftX": 854,
-                        "topY": 920,
-                        "rightX": 1267,
-                        "bottomY": 1246
+                        "leftX": 628,
+                        "topY": 701,
+                        "rightX": 940,
+                        "bottomY": 941
                     }
                 },
                 {
@@ -145,10 +145,23 @@
                         "jumpTo": 276.5
                     },
                     "coord": {
-                        "leftX": 1346,
-                        "topY": 930,
-                        "rightX": 2018,
-                        "bottomY": 1244
+                        "leftX": 996,
+                        "topY": 697,
+                        "rightX": 1496,
+                        "bottomY": 938
+                    }
+                },
+                {
+                    "name": "clickReturnToAccueilMenu",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 34.1
+                    },
+                    "coord": {
+                        "leftX": 1581,
+                        "topY": 843,
+                        "rightX": 1941,
+                        "bottomY": 992
                     }
                 }
             ]
@@ -158,6 +171,190 @@
             "type": "move",
             "from": 183,
             "to": 178.7
+        },
+        {
+            "name": "clickReturnFromRetardAbsence",
+            "type": "click",
+            "timer": {
+                "starting": 193.7,
+                "ending": 196.2
+            },
+            "action": {
+                "jumpTo": 178.7
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnFromRetardAbsence",
+            "type": "move",
+            "from": 196,
+            "to": 193.5
+        },
+        {
+            "name": "clickReturnMaladie",
+            "type": "click",
+            "timer": {
+                "starting": 207.7,
+                "ending": 210.2
+            },
+            "action": {
+                "jumpTo": 178.7
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnFromMaladie",
+            "type": "move",
+            "from": 210,
+            "to": 207.5
+        },
+        {
+            "name": "clickReturnSoutien",
+            "type": "click",
+            "timer": {
+                "starting": 224.2,
+                "ending": 227.2
+            },
+            "action": {
+                "jumpTo": 178.7
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnFromSoutien",
+            "type": "move",
+            "from": 227,
+            "to": 224
+        },
+        {
+            "name": "clickReturnAbsencesDifficultes",
+            "type": "click",
+            "timer": {
+                "starting": 238.2,
+                "ending": 241.2
+            },
+            "action": {
+                "jumpTo": 178.7
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnAbsencesDifficultes",
+            "type": "move",
+            "from": 241,
+            "to": 238
+        },
+        {
+            "name": "clickReturnBilan",
+            "type": "click",
+            "timer": {
+                "starting": 253.2,
+                "ending": 257.2
+            },
+            "action": {
+                "jumpTo": 178.7
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnBilan",
+            "type": "move",
+            "from": 257,
+            "to": 253
+        },
+        {
+            "name": "clickReturnOrientation",
+            "type": "click",
+            "timer": {
+                "starting": 270.2,
+                "ending": 273.2
+            },
+            "action": {
+                "jumpTo": 178.7
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnOrientation",
+            "type": "move",
+            "from": 273,
+            "to": 270
+        },
+        {
+            "name": "clickReturnDifficulteParticuliere",
+            "type": "click",
+            "timer": {
+                "starting": 286.2,
+                "ending": 289.2
+            },
+            "action": {
+                "jumpTo": 178.7
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnDifficulteParticuliere",
+            "type": "move",
+            "from": 289,
+            "to": 286
+        },
+        {
+            "name": "clickReturnEleves",
+            "type": "click",
+            "timer": {
+                "starting": 449.2,
+                "ending": 453.2
+            },
+            "action": {
+                "jumpTo": 34.1
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnEleves",
+            "type": "move",
+            "from": 453,
+            "to": 449
         }
     ]
 }
