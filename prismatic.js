@@ -1,5 +1,5 @@
 var INTERVAL_MS_CHECK_CURRRENT_TIME = 5;
-var MARGIN_S_CHECK_MOVE_ACTION = 0.1;
+var MARGIN_S_CHECK_MOVE_ACTION = 0.02;
 
 /**
  * Base object, with option init  
