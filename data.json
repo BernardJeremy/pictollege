@@ -5,12 +5,6 @@
     },
     "events": [
         {
-            "name": "JUMPTOACCEUIL",
-            "type": "move",
-            "from": 1,
-            "to": 468
-        },
-        {
             "name": "accueilMenu",
             "type": "menu",
             "timer": {
