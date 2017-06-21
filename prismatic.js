@@ -1,5 +1,5 @@
 var INTERVAL_MS_CHECK_CURRRENT_TIME = 5;
-var MARGIN_S_CHECK_MOVE_ACTION = 0.02;
+var MARGIN_S_CHECK_MOVE_ACTION = 0.1;
 
 /**
  * Base object, with option init  
@@ -18,6 +18,7 @@ var Prismatic = function (options) {
   this.videoId = options.videoID || 'my-video';
   this.jsonFileUrl = options.jsonFileUrl || 'data.json';
   this.debug = options.debug || false;
+  this.lastClickTime = (new Date).getTime();
 
   this.player = document.getElementById(this.videoId);
   var prismatic = this;
@@ -73,7 +74,8 @@ Prismatic.prototype.manageClick = function (data, videoCanva, val, timer, e) {
     "bottomY": parseFloat(val.coord.bottomY) / parseFloat(data.baseData.baseHeight) * parseFloat(videoCanva.offsetHeight),
   };
 
-  if (this.isInZone(e.clientX, e.clientY, actualZone) && this.isInTiming(timer.starting, timer.ending, this.player.currentTime)) {
+  if ((this.lastClickTime + 1000 < (new Date).getTime()) && this.isInZone(e.clientX, e.clientY, actualZone) && this.isInTiming(timer.starting, timer.ending, this.player.currentTime)) {
+    this.lastClickTime = (new Date).getTime();
     if (val.action.jumpTo) {
       this.LOG('[' + val.name + '] Jump to  : ' + val.action.jumpTo + 's');
       this.setCurrentTime(val.action.jumpTo);
