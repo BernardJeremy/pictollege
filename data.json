@@ -5,18 +5,24 @@
     },
     "events": [
         {
+            "name": "JUMPTOACCEUIL",
+            "type": "move",
+            "from": 1,
+            "to": 468
+        },
+        {
             "name": "accueilMenu",
             "type": "menu",
             "timer": {
-                "starting": 34.2,
-                "ending": 36.2
+                "starting": 33,
+                "ending": 38
             },
             "items": [
                 {
                     "name": "clickMenuParents",
                     "type": "click",
                     "action": {
-                        "jumpTo": 39.5
+                        "jumpTo": 38.5
                     },
                     "coord": {
                         "leftX": 157,
@@ -29,13 +35,26 @@
                     "name": "clickMenuEleves",
                     "type": "click",
                     "action": {
-                        "jumpTo": 290.5
+                        "jumpTo": 292.6
                     },
                     "coord": {
                         "leftX": 767,
                         "topY": 35,
                         "rightX": 1346,
                         "bottomY": 1013
+                    }
+                },
+                {
+                    "name": "clickMenuCollege",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 453.8
+                    },
+                    "coord": {
+                        "leftX": 1369,
+                        "topY": 36,
+                        "rightX": 1953,
+                        "bottomY": 1028
                     }
                 }
             ]
@@ -44,21 +63,21 @@
             "name": "JumpToAccueilMenuBegin",
             "type": "move",
             "from": 36,
-            "to": 34.1
+            "to": 34
         },
         {
             "name": "problemesParentsMenu",
             "type": "menu",
             "timer": {
-                "starting": 179,
-                "ending": 184
+                "starting": 177,
+                "ending": 183
             },
             "items": [
                 {
                     "name": "clickRetardAbsence",
                     "type": "click",
                     "action": {
-                        "jumpTo": 186
+                        "jumpTo": 185
                     },
                     "coord": {
                         "leftX": 470,
@@ -71,7 +90,7 @@
                     "name": "clickMaladie",
                     "type": "click",
                     "action": {
-                        "jumpTo": 198.5
+                        "jumpTo": 197.5
                     },
                     "coord": {
                         "leftX": 996,
@@ -84,7 +103,7 @@
                     "name": "clickSoutien",
                     "type": "click",
                     "action": {
-                        "jumpTo": 212.2
+                        "jumpTo": 211.5
                     },
                     "coord": {
                         "leftX": 234,
@@ -97,7 +116,7 @@
                     "name": "clickAbsenceDifficulte",
                     "type": "click",
                     "action": {
-                        "jumpTo": 229
+                        "jumpTo": 231.5
                     },
                     "coord": {
                         "leftX": 994,
@@ -110,7 +129,7 @@
                     "name": "clickBilan",
                     "type": "click",
                     "action": {
-                        "jumpTo": 244
+                        "jumpTo": 246
                     },
                     "coord": {
                         "leftX": 228,
@@ -123,7 +142,7 @@
                     "name": "clickInfoOrientation",
                     "type": "click",
                     "action": {
-                        "jumpTo": 259.5
+                        "jumpTo": 261
                     },
                     "coord": {
                         "leftX": 628,
@@ -136,7 +155,7 @@
                     "name": "clickDifficulteImportanteParticuliere",
                     "type": "click",
                     "action": {
-                        "jumpTo": 276.5
+                        "jumpTo": 279
                     },
                     "coord": {
                         "leftX": 996,
@@ -149,7 +168,7 @@
                     "name": "clickReturnToAccueilMenu",
                     "type": "click",
                     "action": {
-                        "jumpTo": 34.1
+                        "jumpTo": 34
                     },
                     "coord": {
                         "leftX": 1581,
@@ -170,8 +189,8 @@
             "name": "clickReturnFromRetardAbsence",
             "type": "click",
             "timer": {
-                "starting": 193.7,
-                "ending": 196.2
+                "starting": 190,
+                "ending": 193
             },
             "action": {
                 "jumpTo": 178.7
@@ -186,15 +205,15 @@
         {
             "name": "JumpToReturnFromRetardAbsence",
             "type": "move",
-            "from": 196,
-            "to": 193.5
+            "from": 193,
+            "to": 190.5
         },
         {
             "name": "clickReturnMaladie",
             "type": "click",
             "timer": {
-                "starting": 207.7,
-                "ending": 210.2
+                "starting": 205,
+                "ending": 210
             },
             "action": {
                 "jumpTo": 178.7
@@ -233,14 +252,14 @@
             "name": "JumpToReturnFromSoutien",
             "type": "move",
             "from": 227,
-            "to": 224
+            "to": 225
         },
         {
             "name": "clickReturnAbsencesDifficultes",
             "type": "click",
             "timer": {
-                "starting": 238.2,
-                "ending": 241.2
+                "starting": 240,
+                "ending": 244
             },
             "action": {
                 "jumpTo": 178.7
@@ -255,15 +274,15 @@
         {
             "name": "JumpToReturnAbsencesDifficultes",
             "type": "move",
-            "from": 241,
-            "to": 238
+            "from": 244,
+            "to": 241
         },
         {
             "name": "clickReturnBilan",
             "type": "click",
             "timer": {
-                "starting": 253.2,
-                "ending": 257.2
+                "starting": 254,
+                "ending": 257
             },
             "action": {
                 "jumpTo": 178.7
@@ -279,14 +298,14 @@
             "name": "JumpToReturnBilan",
             "type": "move",
             "from": 257,
-            "to": 253
+            "to": 255
         },
         {
             "name": "clickReturnOrientation",
             "type": "click",
             "timer": {
-                "starting": 270.2,
-                "ending": 273.2
+                "starting": 270,
+                "ending": 274
             },
             "action": {
                 "jumpTo": 178.7
@@ -301,8 +320,8 @@
         {
             "name": "JumpToReturnOrientation",
             "type": "move",
-            "from": 273,
-            "to": 270
+            "from": 274,
+            "to": 271
         },
         {
             "name": "clickReturnDifficulteParticuliere",
@@ -331,11 +350,154 @@
             "name": "clickReturnEleves",
             "type": "click",
             "timer": {
-                "starting": 449.2,
-                "ending": 453.2
+                "starting": 447,
+                "ending": 451
             },
             "action": {
-                "jumpTo": 34.1
+                "jumpTo": 33
+            },
+            "coord": {
+                "leftX": 126,
+                "topY": 18,
+                "rightX": 411,
+                "bottomY": 199
+            }
+        },
+        {
+            "name": "JumpToReturnEleves",
+            "type": "move",
+            "from": 451,
+            "to": 449
+        },
+        {
+            "name": "collegeMenu",
+            "type": "menu",
+            "timer": {
+                "starting": 469,
+                "ending": 475
+            },
+            "items": [
+                {
+                    "name": "clickSeptembre",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 475
+                    },
+                    "coord": {
+                        "leftX": 214,
+                        "topY": 745,
+                        "rightX": 385,
+                        "bottomY": 941
+                    }
+                },
+                {
+                    "name": "clickOctobre",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 514
+                    },
+                    "coord": {
+                        "leftX": 420,
+                        "topY": 745,
+                        "rightX": 588,
+                        "bottomY": 941
+                    }
+                },
+                {
+                    "name": "clickNovembre",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 571
+                    },
+                    "coord": {
+                        "leftX": 621,
+                        "topY": 746,
+                        "rightX": 786,
+                        "bottomY": 940
+                    }
+                },
+                {
+                    "name": "clickDecembre",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 633
+                    },
+                    "coord": {
+                        "leftX": 825,
+                        "topY": 746,
+                        "rightX": 996,
+                        "bottomY": 940
+                    }
+                },
+                {
+                    "name": "clickFevrier",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 643
+                    },
+                    "coord": {
+                        "leftX": 1300,
+                        "topY": 305,
+                        "rightX": 1470,
+                        "bottomY": 502
+                    }
+                },
+                {
+                    "name": "clickMars",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 654
+                    },
+                    "coord": {
+                        "leftX": 1500,
+                        "topY": 302,
+                        "rightX": 1669,
+                        "bottomY": 496
+                    }
+                },
+                {
+                    "name": "clickJuin",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 680
+                    },
+                    "coord": {
+                        "leftX": 1301,
+                        "topY": 525,
+                        "rightX": 1466,
+                        "bottomY": 716
+                    }
+                },
+                {
+                    "name": "clickReturnToAccueilMenu",
+                    "type": "click",
+                    "action": {
+                        "jumpTo": 34
+                    },
+                    "coord": {
+                        "leftX": 1589,
+                        "topY": 774,
+                        "rightX": 1813,
+                        "bottomY": 921
+                    }
+                }
+            ]
+        },
+        {
+            "name": "JumpToCollegeMenuBegin",
+            "type": "move",
+            "from": 473,
+            "to": 470
+        },
+        {
+            "name": "clickReturnFromSeptembre",
+            "type": "click",
+            "timer": {
+                "starting": 509,
+                "ending": 512
+            },
+            "action": {
+                "jumpTo": 470
             },
             "coord": {
                 "leftX": 124,
@@ -345,10 +507,148 @@
             }
         },
         {
-            "name": "JumpToReturnEleves",
+            "name": "JumpToReturnFromSeptembre",
             "type": "move",
-            "from": 453,
-            "to": 449
+            "from": 512,
+            "to": 510
+        },
+        {
+            "name": "clickReturnFromOctobre",
+            "type": "click",
+            "timer": {
+                "starting": 563,
+                "ending": 566
+            },
+            "action": {
+                "jumpTo": 470
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnFromOctobre",
+            "type": "move",
+            "from": 566,
+            "to": 564
+        },
+        {
+            "name": "clickReturnFromNovembre",
+            "type": "click",
+            "timer": {
+                "starting": 627,
+                "ending": 630
+            },
+            "action": {
+                "jumpTo": 470
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnFromNovembre",
+            "type": "move",
+            "from": 629.7,
+            "to": 628
+        },
+        {
+            "name": "clickReturnFromDecembre",
+            "type": "click",
+            "timer": {
+                "starting": 639,
+                "ending": 642
+            },
+            "action": {
+                "jumpTo": 470
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnFromDecembre",
+            "type": "move",
+            "from": 641.8,
+            "to": 639
+        },
+        {
+            "name": "clickReturnFromFevrier",
+            "type": "click",
+            "timer": {
+                "starting": 648,
+                "ending": 651
+            },
+            "action": {
+                "jumpTo": 470
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnFromFevrier",
+            "type": "move",
+            "from": 650.8,
+            "to": 648.5
+        },
+        {
+            "name": "clickReturnFromMars",
+            "type": "click",
+            "timer": {
+                "starting": 675,
+                "ending": 678
+            },
+            "action": {
+                "jumpTo": 470
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnFromMars",
+            "type": "move",
+            "from": 677.8,
+            "to": 675.5
+        },
+        {
+            "name": "clickReturnFromJuin",
+            "type": "click",
+            "timer": {
+                "starting": 706,
+                "ending": 709
+            },
+            "action": {
+                "jumpTo": 470
+            },
+            "coord": {
+                "leftX": 124,
+                "topY": 2,
+                "rightX": 443,
+                "bottomY": 292
+            }
+        },
+        {
+            "name": "JumpToReturnFromJuin",
+            "type": "move",
+            "from": 708.8,
+            "to": 706.5
         }
     ]
 }
