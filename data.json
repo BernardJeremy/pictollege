@@ -292,7 +292,7 @@
             "name": "JumpToReturnBilan",
             "type": "move",
             "from": 257,
-            "to": 255
+            "to": 256
         },
         {
             "name": "clickReturnOrientation",
@@ -315,7 +315,7 @@
             "name": "JumpToReturnOrientation",
             "type": "move",
             "from": 274,
-            "to": 271
+            "to": 272
         },
         {
             "name": "clickReturnDifficulteParticuliere",
@@ -361,7 +361,7 @@
             "name": "JumpToReturnEleves",
             "type": "move",
             "from": 451,
-            "to": 449
+            "to": 448
         },
         {
             "name": "collegeMenu",
@@ -388,7 +388,7 @@
                     "name": "clickOctobre",
                     "type": "click",
                     "action": {
-                        "jumpTo": 514
+                        "jumpTo": 513.7
                     },
                     "coord": {
                         "leftX": 420,
@@ -427,7 +427,7 @@
                     "name": "clickFevrier",
                     "type": "click",
                     "action": {
-                        "jumpTo": 643
+                        "jumpTo": 642.5
                     },
                     "coord": {
                         "leftX": 1300,
@@ -527,7 +527,7 @@
             "name": "JumpToReturnFromOctobre",
             "type": "move",
             "from": 566,
-            "to": 564
+            "to": 563.3
         },
         {
             "name": "clickReturnFromNovembre",
