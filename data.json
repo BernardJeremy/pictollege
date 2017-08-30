@@ -246,7 +246,7 @@
             "name": "JumpToReturnFromSoutien",
             "type": "move",
             "from": 236,
-            "to": 234
+            "to": 234.3
         },
         {
             "name": "clickReturnAbsencesDifficultes",
@@ -292,7 +292,7 @@
             "name": "JumpToReturnBilan",
             "type": "move",
             "from": 266,
-            "to": 265
+            "to": 263.2
         },
         {
             "name": "clickReturnOrientation",
@@ -642,7 +642,7 @@
             "name": "JumpToReturnFromJuin",
             "type": "move",
             "from": 736.5,
-            "to": 734
+            "to": 734.7
         }
     ]
 }
