@@ -29,7 +29,7 @@
                     "name": "clickMenuEleves",
                     "type": "click",
                     "action": {
-                        "jumpTo": 292.6
+                        "jumpTo": 300.5
                     },
                     "coord": {
                         "leftX": 767,
@@ -42,7 +42,7 @@
                     "name": "clickMenuCollege",
                     "type": "click",
                     "action": {
-                        "jumpTo": 453.8
+                        "jumpTo": 465.5
                     },
                     "coord": {
                         "leftX": 1369,
@@ -63,15 +63,15 @@
             "name": "problemesParentsMenu",
             "type": "menu",
             "timer": {
-                "starting": 177,
-                "ending": 183
+                "starting": 185,
+                "ending": 192
             },
             "items": [
                 {
                     "name": "clickRetardAbsence",
                     "type": "click",
                     "action": {
-                        "jumpTo": 185
+                        "jumpTo": 192.5
                     },
                     "coord": {
                         "leftX": 470,
@@ -84,7 +84,7 @@
                     "name": "clickMaladie",
                     "type": "click",
                     "action": {
-                        "jumpTo": 197.5
+                        "jumpTo": 205
                     },
                     "coord": {
                         "leftX": 996,
@@ -97,7 +97,7 @@
                     "name": "clickSoutien",
                     "type": "click",
                     "action": {
-                        "jumpTo": 211.5
+                        "jumpTo": 219
                     },
                     "coord": {
                         "leftX": 234,
@@ -110,7 +110,7 @@
                     "name": "clickAbsenceDifficulte",
                     "type": "click",
                     "action": {
-                        "jumpTo": 231.5
+                        "jumpTo": 239
                     },
                     "coord": {
                         "leftX": 994,
@@ -123,7 +123,7 @@
                     "name": "clickBilan",
                     "type": "click",
                     "action": {
-                        "jumpTo": 246
+                        "jumpTo": 254
                     },
                     "coord": {
                         "leftX": 228,
@@ -136,7 +136,7 @@
                     "name": "clickInfoOrientation",
                     "type": "click",
                     "action": {
-                        "jumpTo": 261
+                        "jumpTo": 269
                     },
                     "coord": {
                         "leftX": 628,
@@ -149,7 +149,7 @@
                     "name": "clickDifficulteImportanteParticuliere",
                     "type": "click",
                     "action": {
-                        "jumpTo": 279
+                        "jumpTo": 286
                     },
                     "coord": {
                         "leftX": 996,
@@ -176,18 +176,18 @@
         {
             "name": "JumpToProblemesParentsMenuBegin",
             "type": "move",
-            "from": 183,
-            "to": 178.7
+            "from": 190,
+            "to": 186.5
         },
         {
             "name": "clickReturnFromRetardAbsence",
             "type": "click",
             "timer": {
-                "starting": 190,
-                "ending": 193
+                "starting": 197,
+                "ending": 202
             },
             "action": {
-                "jumpTo": 178.7
+                "jumpTo": 186.6
             },
             "coord": {
                 "leftX": 124,
@@ -199,18 +199,18 @@
         {
             "name": "JumpToReturnFromRetardAbsence",
             "type": "move",
-            "from": 193,
-            "to": 190.5
+            "from": 202,
+            "to": 200
         },
         {
             "name": "clickReturnMaladie",
             "type": "click",
             "timer": {
-                "starting": 205,
-                "ending": 210
+                "starting": 213,
+                "ending": 219
             },
             "action": {
-                "jumpTo": 178.7
+                "jumpTo": 186.6
             },
             "coord": {
                 "leftX": 124,
@@ -222,18 +222,18 @@
         {
             "name": "JumpToReturnFromMaladie",
             "type": "move",
-            "from": 210,
-            "to": 207.5
+            "from": 217.5,
+            "to": 216
         },
         {
             "name": "clickReturnSoutien",
             "type": "click",
             "timer": {
-                "starting": 224.2,
-                "ending": 227.2
+                "starting": 232,
+                "ending": 236
             },
             "action": {
-                "jumpTo": 178.7
+                "jumpTo": 186.6
             },
             "coord": {
                 "leftX": 124,
@@ -245,18 +245,18 @@
         {
             "name": "JumpToReturnFromSoutien",
             "type": "move",
-            "from": 227,
-            "to": 225
+            "from": 236,
+            "to": 234
         },
         {
             "name": "clickReturnAbsencesDifficultes",
             "type": "click",
             "timer": {
-                "starting": 240,
-                "ending": 244
+                "starting": 248,
+                "ending": 252
             },
             "action": {
-                "jumpTo": 178.7
+                "jumpTo": 186.6
             },
             "coord": {
                 "leftX": 124,
@@ -268,18 +268,18 @@
         {
             "name": "JumpToReturnAbsencesDifficultes",
             "type": "move",
-            "from": 244,
-            "to": 241
+            "from": 251,
+            "to": 250
         },
         {
             "name": "clickReturnBilan",
             "type": "click",
             "timer": {
-                "starting": 254,
-                "ending": 257
+                "starting": 263,
+                "ending": 266
             },
             "action": {
-                "jumpTo": 178.7
+                "jumpTo": 186.6
             },
             "coord": {
                 "leftX": 124,
@@ -291,18 +291,18 @@
         {
             "name": "JumpToReturnBilan",
             "type": "move",
-            "from": 257,
-            "to": 256
+            "from": 266,
+            "to": 265
         },
         {
             "name": "clickReturnOrientation",
             "type": "click",
             "timer": {
-                "starting": 270,
-                "ending": 274
+                "starting": 279,
+                "ending": 283
             },
             "action": {
-                "jumpTo": 178.7
+                "jumpTo": 186.6
             },
             "coord": {
                 "leftX": 124,
@@ -314,18 +314,18 @@
         {
             "name": "JumpToReturnOrientation",
             "type": "move",
-            "from": 274,
-            "to": 272
+            "from": 283,
+            "to": 281
         },
         {
             "name": "clickReturnDifficulteParticuliere",
             "type": "click",
             "timer": {
-                "starting": 286.2,
-                "ending": 289.2
+                "starting": 294,
+                "ending": 298
             },
             "action": {
-                "jumpTo": 178.7
+                "jumpTo": 186.6
             },
             "coord": {
                 "leftX": 124,
@@ -337,15 +337,15 @@
         {
             "name": "JumpToReturnDifficulteParticuliere",
             "type": "move",
-            "from": 289,
-            "to": 286
+            "from": 298,
+            "to": 296
         },
         {
             "name": "clickReturnEleves",
             "type": "click",
             "timer": {
-                "starting": 447,
-                "ending": 451
+                "starting": 459,
+                "ending": 464
             },
             "action": {
                 "jumpTo": 34
@@ -360,22 +360,22 @@
         {
             "name": "JumpToReturnEleves",
             "type": "move",
-            "from": 451,
-            "to": 448
+            "from": 464,
+            "to": 462
         },
         {
             "name": "collegeMenu",
             "type": "menu",
             "timer": {
-                "starting": 469,
-                "ending": 475
+                "starting": 481,
+                "ending": 486
             },
             "items": [
                 {
                     "name": "clickSeptembre",
                     "type": "click",
                     "action": {
-                        "jumpTo": 475
+                        "jumpTo": 487
                     },
                     "coord": {
                         "leftX": 214,
@@ -388,7 +388,7 @@
                     "name": "clickOctobre",
                     "type": "click",
                     "action": {
-                        "jumpTo": 513.7
+                        "jumpTo": 525.6
                     },
                     "coord": {
                         "leftX": 420,
@@ -401,7 +401,7 @@
                     "name": "clickNovembre",
                     "type": "click",
                     "action": {
-                        "jumpTo": 571
+                        "jumpTo": 597.2
                     },
                     "coord": {
                         "leftX": 621,
@@ -414,7 +414,7 @@
                     "name": "clickDecembre",
                     "type": "click",
                     "action": {
-                        "jumpTo": 633
+                        "jumpTo": 659.5
                     },
                     "coord": {
                         "leftX": 825,
@@ -427,7 +427,7 @@
                     "name": "clickFevrier",
                     "type": "click",
                     "action": {
-                        "jumpTo": 642.5
+                        "jumpTo": 669
                     },
                     "coord": {
                         "leftX": 1300,
@@ -440,7 +440,7 @@
                     "name": "clickMars",
                     "type": "click",
                     "action": {
-                        "jumpTo": 654
+                        "jumpTo": 680.5
                     },
                     "coord": {
                         "leftX": 1500,
@@ -453,7 +453,7 @@
                     "name": "clickJuin",
                     "type": "click",
                     "action": {
-                        "jumpTo": 680
+                        "jumpTo": 706
                     },
                     "coord": {
                         "leftX": 1301,
@@ -480,18 +480,18 @@
         {
             "name": "JumpToCollegeMenuBegin",
             "type": "move",
-            "from": 473,
-            "to": 470
+            "from": 486,
+            "to": 483.5
         },
         {
             "name": "clickReturnFromSeptembre",
             "type": "click",
             "timer": {
-                "starting": 509,
-                "ending": 512
+                "starting": 520.5,
+                "ending": 524
             },
             "action": {
-                "jumpTo": 470
+                "jumpTo": 482
             },
             "coord": {
                 "leftX": 124,
@@ -503,18 +503,18 @@
         {
             "name": "JumpToReturnFromSeptembre",
             "type": "move",
-            "from": 512,
-            "to": 510
+            "from": 524,
+            "to": 522.5
         },
         {
             "name": "clickReturnFromOctobre",
             "type": "click",
             "timer": {
-                "starting": 563,
-                "ending": 566
+                "starting": 589,
+                "ending": 593
             },
             "action": {
-                "jumpTo": 470
+                "jumpTo": 482
             },
             "coord": {
                 "leftX": 124,
@@ -526,18 +526,18 @@
         {
             "name": "JumpToReturnFromOctobre",
             "type": "move",
-            "from": 566,
-            "to": 563.3
+            "from": 593,
+            "to": 591.5
         },
         {
             "name": "clickReturnFromNovembre",
             "type": "click",
             "timer": {
-                "starting": 627,
-                "ending": 630
+                "starting": 652,
+                "ending": 656
             },
             "action": {
-                "jumpTo": 470
+                "jumpTo": 482
             },
             "coord": {
                 "leftX": 124,
@@ -549,18 +549,18 @@
         {
             "name": "JumpToReturnFromNovembre",
             "type": "move",
-            "from": 629.7,
-            "to": 628
+            "from": 656,
+            "to": 654.5
         },
         {
             "name": "clickReturnFromDecembre",
             "type": "click",
             "timer": {
-                "starting": 639,
-                "ending": 642
+                "starting": 664,
+                "ending": 668
             },
             "action": {
-                "jumpTo": 470
+                "jumpTo": 482
             },
             "coord": {
                 "leftX": 124,
@@ -572,18 +572,18 @@
         {
             "name": "JumpToReturnFromDecembre",
             "type": "move",
-            "from": 641.8,
-            "to": 639
+            "from": 668,
+            "to": 666.7
         },
         {
             "name": "clickReturnFromFevrier",
             "type": "click",
             "timer": {
-                "starting": 648,
-                "ending": 651
+                "starting": 674,
+                "ending": 678
             },
             "action": {
-                "jumpTo": 470
+                "jumpTo": 482
             },
             "coord": {
                 "leftX": 124,
@@ -595,18 +595,18 @@
         {
             "name": "JumpToReturnFromFevrier",
             "type": "move",
-            "from": 650.8,
-            "to": 648.5
+            "from": 678,
+            "to": 676.5
         },
         {
             "name": "clickReturnFromMars",
             "type": "click",
             "timer": {
-                "starting": 675,
-                "ending": 678
+                "starting": 700,
+                "ending": 704
             },
             "action": {
-                "jumpTo": 470
+                "jumpTo": 482
             },
             "coord": {
                 "leftX": 124,
@@ -618,18 +618,18 @@
         {
             "name": "JumpToReturnFromMars",
             "type": "move",
-            "from": 677.8,
-            "to": 675.5
+            "from": 704,
+            "to": 702.5
         },
         {
             "name": "clickReturnFromJuin",
             "type": "click",
             "timer": {
-                "starting": 706,
-                "ending": 709
+                "starting": 733,
+                "ending": 736.5
             },
             "action": {
-                "jumpTo": 470
+                "jumpTo": 482
             },
             "coord": {
                 "leftX": 124,
@@ -641,8 +641,8 @@
         {
             "name": "JumpToReturnFromJuin",
             "type": "move",
-            "from": 708.8,
-            "to": 706.5
+            "from": 736.5,
+            "to": 734
         }
     ]
 }
