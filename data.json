@@ -246,7 +246,7 @@
             "name": "JumpToReturnFromSoutien",
             "type": "move",
             "from": 236,
-            "to": 234.3
+            "to": 233
         },
         {
             "name": "clickReturnAbsencesDifficultes",
